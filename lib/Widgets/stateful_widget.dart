@@ -42,7 +42,9 @@ class StatefulActionScreen extends State<StatefulAction> {
           Center(
             child: Container(
               margin: EdgeInsets.all(20),
-              child: _image == null ? Text('No image selected.') : Image.file(_image),
+              height: 400,
+              width: 600,
+              child: _image == null ? Text('No image selected.', textAlign: TextAlign.center,) : Image.file(_image),
             )
           ),
           FlatButton(
