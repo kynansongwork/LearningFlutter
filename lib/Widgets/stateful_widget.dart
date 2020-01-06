@@ -1,31 +1,34 @@
 import 'package:flutter/material.dart';
 
-class NewAction extends StatefulWidget {
+class StatefulAction extends StatefulWidget {
   @override
-  NewActionApp createState() {
-    return NewActionApp();
+  StatefulActionScreen createState() {
+    return StatefulActionScreen();
   }
 }
 
-class NewActionApp extends State<NewAction> {
+class StatefulActionScreen extends State<StatefulAction> {
   int counter = 0;
   bool checkTick = false;
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: <Widget>[
-        Text("Counter value => $counter"),
-        Checkbox(
-          value: checkTick,
-          onChanged: (newTick) {
-            setState(() {
-              counter++;
-              checkTick = newTick;
-            });
-          },
-        )
-      ],
+    return Container(
+      margin: const EdgeInsets.only(top: 20),
+      child: Column(
+        children: <Widget>[
+          Text("Counter value => $counter"),
+          Checkbox(
+            value: checkTick,
+            onChanged: (newTick) {
+              setState(() {
+                counter++;
+                checkTick = newTick;
+              });
+            },
+          )
+        ],
+      )
     );
   }
 }

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:english_words/english_words.dart';
+import 'package:test_app/Widgets/stateless_widget.dart';
 
 import 'stateful_widget.dart';
 
@@ -34,8 +35,8 @@ class RandomWordsState extends State<RandomWords> {
         body: TabBarView(
           children: <Widget>[
             _buildSuggestions(),
-            NewAction(),
-            Text("test page 3")
+            StatefulAction(),
+            StatelessAction()
           ],
         )
       ),
