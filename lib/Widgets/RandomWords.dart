@@ -13,15 +13,31 @@ class RandomWordsState extends State<RandomWords> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold (
-      appBar: AppBar(
-        title: Text('Start the name generator'),
-        actions: <Widget>[
-          IconButton(icon: Icon(Icons.list), onPressed: _pushSaved),
-        ],
+    return DefaultTabController(
+      length: 3,
+      child: Scaffold (
+        appBar: AppBar(
+          title: Text('Start the name generator'),
+          actions: <Widget>[
+            IconButton(icon: Icon(Icons.list), onPressed: _pushSaved),
+          ],
+          bottom: TabBar(
+            tabs: <Widget>[
+              Tab(icon: Icon(Icons.audiotrack)),
+              Tab(icon: Icon(Icons.ac_unit)),
+              Tab(icon: Icon(Icons.access_alarm)),
+            ],
+          ),
+        ),
+        body: TabBarView(
+          children: <Widget>[
+            _buildSuggestions(),
+            Text("test page 2"),
+            Text("test page 3")
+          ],
+        )
       ),
-      body: _buildSuggestions(),
-    );
+    ); 
   }
 
   void _pushSaved() {
