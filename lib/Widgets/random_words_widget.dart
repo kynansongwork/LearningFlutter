@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:english_words/english_words.dart';
 
+import 'stateful_widget.dart';
+
 class RandomWords extends StatefulWidget {
   @override
   RandomWordsState createState() => RandomWordsState();
@@ -32,7 +34,7 @@ class RandomWordsState extends State<RandomWords> {
         body: TabBarView(
           children: <Widget>[
             _buildSuggestions(),
-            Text("test page 2"),
+            NewAction(),
             Text("test page 3")
           ],
         )

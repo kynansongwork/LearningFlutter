@@ -16,7 +16,15 @@ class NewActionApp extends State<NewAction> {
     return Column(
       children: <Widget>[
         Text("Counter value => $counter"),
-        Checkbox()
+        Checkbox(
+          value: checkTick,
+          onChanged: (newTick) {
+            setState(() {
+              counter++;
+              checkTick = newTick;
+            });
+          },
+        )
       ],
     );
   }

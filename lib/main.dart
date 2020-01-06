@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'Widgets/RandomWords.dart';
+import 'Widgets/random_words_widget.dart';
 
 void main() => runApp(MyApp());
 
